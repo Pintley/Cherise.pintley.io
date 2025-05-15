@@ -1,0 +1,211 @@
+@font-face {
+    font-family: noir;            /* this will be the font fot the titels of the genras */
+    src: url(Film\ Noir.ttf);
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: 100px;
+
+
+
+
+/* this css is for the log in page */
+.img-back{
+    background-image: url(red-cinema-seats-empty-theater-q48lzql0t93qzexn.jpg);
+}
+
+.form{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.contact{
+    background-color: #000000; 
+    border-radius: 40px; 
+    padding: 4%;
+    margin-top: 20%;
+
+}
+
+
+.legend{
+    font-size: 300%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+.labels{
+    font-size: 150%;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-back{
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.btn-confirm{
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+
+
+
+/* size of the vidoe */
+.vidoe{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+}
+.hight{
+min-height: fit-content;
+height: 600px;
+overflow: hidden;
+}
+
+.header{
+    margin-left: 45%;
+    margin-right: 55%;
+    color: #ffffff;
+    font-family: noir, 'Times New Roman', Times, serif;
+}
+
+.logo{
+left: 5px;
+   height: 7%;
+   width: 30%;
+   position: absolute;
+}
+
+.search{
+    background-color: #000000;
+    outline-color: #ffffff;
+    position:absolute;
+    right: 1px;
+
+}
+
+.dropdown-color{
+    color: #ffffff;
+}
+
+.homeimage{
+
+    height: 90%;
+    width: 90%;
+}
+
+
+
+.btn-home{
+    
+    
+    padding: 1.2em;
+    font-size: 5em;
+    border-radius: 10px;
+
+}
+
+.btn-mid{
+    margin-left: 45%;
+
+}
+
+.image-login{
+    height: 100%;
+    width: 100%;
+
+}
+
+.hometext{
+position: absolute;
+
+
+}
+
+
+/* to make the photo of the film the same size all the way */
+.card {
+    width: 350px; 
+    height: 700px; 
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+
+  .card-img-top{
+    display: block;
+    min-height: 450px;
+    min-width: 300px;
+    max-height: 450px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
+  }
+
+  .btn-center{
+margin-left: auto;
+margin-right: auto;
+width: 300px;
+  }
+
+
+
+/* background for the log in page */
+  .img-back{
+    background-image: url(red-cinema-seats-empty-theater-q48lzql0t93qzexn.jpg);
+  }
+
+
+  .box{
+    background-color: #000000;
+    height: 1000px;
+    width: 300px;
+  }
+
+  .title{
+    color: #ffffff;
+  }
+
+
+
+
+/* this is to cange the colour when hovering on the film and tv show dropdowns */
+.dropdown-colour{
+    color: #ffffff;
+
+}
+
+
+.dropdown-colour:hover{
+color: #727272;
+}
+
+
+
+
