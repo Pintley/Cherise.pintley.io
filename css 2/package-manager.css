@@ -1,0 +1,429 @@
+
+
+/* PACKAGE MANAGER */
+/* popup show container */
+.packageManager{
+    position: fixed;
+    z-index:50;
+    background:rgba(17, 17, 17, 0.5);
+    height:100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:none;
+    opacity:0.92;
+ 
+  /* 
+    text-align:center;
+    margin:0 auto; */
+  }
+  
+  
+  /* design part inside width container */
+  .packageManager .contentWidth{
+    height:100%;
+    width:365px;
+
+    margin:0 auto;
+    background:rgb(46, 46, 46); 
+    position: relative;
+  
+  }
+  
+  .packageManager .contentWidth:before { /* Center vertically, part 1 */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  
+  }
+  .packageManager .content {
+    display: inline-block;
+    vertical-align: middle; /* Center vertically, part 2 */
+  
+    width:360px;
+  
+  }
+  
+  .packageManager .close {
+    position: absolute;
+    top:0;
+    /* right:0; */
+    left:0;
+    
+  
+    margin:10px;
+  
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.35s;
+  }
+   .packageManager .close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  
+  .packageManager .close:before, .packageManager .close:after {
+    position: absolute;
+    left: 15px;
+  
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+  }
+  
+  .packageManager .close:before {
+    transform: rotate(45deg);
+  }
+  
+  .packageManager .close:after {
+    transform: rotate(-45deg);
+  }
+  
+  
+  /* content container */
+  /* .packageManager .content{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+  
+  
+  
+  } */
+  
+  .packageManager div.statusLine{
+    border-left:2px solid white;
+    height:33px;
+    margin:9px -5px;
+    /* position: absolute; */
+    float:left;
+  }
+  
+  .packageManager div.titleHeading{
+    margin-bottom:12px;
+    font-size:12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* display: table; */
+    letter-spacing: 0.5px;
+    text-align:center;
+    cursor:default;
+  }
+  
+  .packageManager div.titleHeading p{
+    font-size:8.5px;
+    opacity:0.4;
+  }
+  
+  .packageManager div.titleHeading a{
+    font-size:8.5px;
+    text-decoration: underline;
+  }
+  
+  .packageManager div.titleHeading a:hover,
+  .packageManager div.titleFooter a:hover
+  {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .packageManager div.titleFooter{
+    cursor:default;
+    margin-top:12px;
+    font-size:11px;
+    text-align:center;
+    letter-spacing: 0.2px;
+    opacity:0.5;
+  }
+  
+  .packageManager div.titleFooter a{
+    font-size:11px;
+    text-decoration: underline;
+  }
+  
+  .packageManager .btn_install{
+    /* position: absolute;
+    bottom:10%; */
+      /* position: absolute; */
+  
+    /* bottom:0; */
+    margin:0 auto;
+    text-align:center;
+  
+    font-size:11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  .packageManager h3 p{
+    font-size:10px;
+    opacity:0.6;
+  }
+  
+  .packageManager .no_packages{
+    text-align:center;
+    cursor: default;
+  }
+  
+  .packageManager .no_packages a{
+    border-bottom:1px dotted white;
+    cursor: pointer;
+  }
+  
+  .packageManager .no_packages a:hover{
+    border-bottom:1px solid white;
+  }
+  
+  .packageManager .no_packages p{
+    opacity:0.6;
+  }
+  
+  .packageManager .no_packages .boxLogo{
+    background:url('../img/atom_no_packs.svg') no-repeat;
+    background-size:contain;
+    width:80px;
+    height:80px;
+    margin:10px auto;
+    -webkit-animation: dnd_roll 2.6s ease-in-out infinite;
+    animation: dnd_roll 2.6s ease-in-out infinite;
+  }
+  
+  .packageManager .no_packages .boxLogo.testModeActive{
+    background:url('../img/atom_test_mode_active.svg') no-repeat;
+    background-size:contain;
+    width:80px;
+    height:80px;
+    margin:10px auto;
+    -webkit-animation: dnd_roll 2.6s ease-in-out infinite;
+    animation: dnd_roll 2.6s ease-in-out infinite;
+  }
+  
+  .packageManager .no_packages h4.ye{
+    color: #FFDD00;
+  }
+  
+  .packageManager .no_packages h4{
+    font-size:12px;
+    font-weight: 600;
+    opacity:1;
+  }
+  
+  
+  .packageManager .ulContent{
+  
+    padding-top:14px;
+    padding-bottom:16px;
+    /* min-height: 320px;; */
+    /* height: 100%; */
+  
+    
+
+  min-height: -moz-min-content;
+  min-height: -webkit-min-content;
+  min-height: min-content;
+  min-height: 60px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    /* max-height: 300px; */
+    /* -webkit-box-shadow: 0px 0px 36px -4px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 36px -4px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 36px -4px rgba(0,0,0,0.55);
+   */
+  }
+
+  
+  
+  
+  .packageManager .splitTopLine{
+    border-top:1px solid #4b4b4b;
+    width:80%;
+    margin:0 auto;
+  }
+
+  .packageManager .ulContent li .iconManagerSubs{
+    cursor:help;
+    vertical-align: middle;
+  }
+  
+  .packageManager .ulContent li{
+    /* display:none; */
+    margin:5px auto;
+    /* position:relative; */
+    content: "";
+    display: table;
+    clear: both; 
+  }
+  /* current pack stylish */
+  .packageManager .ulContent li.currentPack .packDetails{
+    background:#f0f0f0;
+    color:black;
+  
+  }
+  
+  .packageManager .ulContent li.currentPack:hover .packDetails{
+    color:white;
+    /* background:rgb(95, 95, 95); */
+  }
+  
+  .packageManager .ulContent li.currentPack .packDetails .author{
+    color:rgb(63, 63, 63);
+  }
+  
+  .packageManager .ulContent li.currentPack:hover .packDetails .author{
+  
+    color:#999;
+  }
+  
+  
+  .packageManager .ulContent li:hover .packDetails{
+    background:rgba(32, 32, 32, 0.4);
+    cursor:default;
+    width:240px;
+  }
+  .packageManager .ulContent li:hover .managerButtons{
+    display:block;
+    margin-left:4px;
+  
+  }
+  
+  
+  
+  
+  
+  
+  /* Pack Details [packageManager] */
+  .packageManager .packDetails{
+    color:white;
+    float:left;
+    width:220px;
+    padding:11px;
+    border-radius: 5px;
+    background:rgba(32, 32, 32, 0.9); 
+    border:1px solid #333;
+    transition:0.2s ease;
+  
+  }
+  
+  
+  /* icons_sector (right) */
+  .packageManager .icons_sector{
+    vertical-align:top;
+    float:right;
+    width: 44px;
+  }
+  
+  
+  .packageManager .icons_sector .gi{
+    cursor:help;
+    margin:0px;
+    margin-bottom:2px;
+    margin-left:2px;
+    float:right;
+    display:block;
+  }
+  
+  
+  /* info sector (left) */
+  .packageManager .info_sector{
+    float:left;
+    width:170px;
+    /* border:1px solid red; */
+  }
+  
+  .packageManager .info_sector .name{
+    font-size:12px;
+    font-weight: 600;
+  }
+  
+  .packageManager .info_sector .author{
+    font-size:10px;
+    color:#999;
+  }
+  
+  .packageManager .info_sector .author strong{
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  .packageManager .info_sector .author strong:hover{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  /* Manage Buttons (right) packDetails */
+  .packageManager .managerButtons{
+    float:right;
+    display:none;
+    margin-left:-70px;
+    /* padding:5px; */
+    margin-top:6px;
+    /* height:41px; */
+    /* background:rgba(32, 32, 32, 0.9); */
+    /* border:1px solid #333; */
+    border-radius: 5px;
+  }
+  
+  /* .packageManager .managerButtons:hover{
+    background:rgba(32, 32, 32, 0.4); 
+  } */
+  
+  .packageManager .managerButtons .btn{
+    margin-left:2px;
+    padding:7px;
+    /* background:rgba(32, 32, 32, 0.9);  */
+    transition:0.2s ease;
+    cursor: pointer;
+    opacity:0.6;
+  }
+  
+  .packageManager .managerButtons .btn:hover{
+    opacity:1;
+  }
+  
+  .packageManager .managerButtons .btn.apply{
+    height:37px;
+    width:42px;
+    padding:0;
+  }
+  
+  .packageManager .managerButtons .btn.small_btns{
+    height:17px;
+    width:18px;
+    padding:0;
+    margin-bottom:3px;
+  }
+  
+  .packageManager .managerButtons .i{
+    width:30px;
+    height:16px;
+  }
+  .packageManager .managerButtons .i.apply_pack{
+    height:40px;
+    width:40px;
+    background:url('../img/icons/other/apply_package.svg') no-repeat;
+    background-size:contain;
+  }
+  .packageManager .managerButtons .i.remove_pack{
+    width:18px;
+    height:18px;
+    background:url('../img/icons/other/remove_package.svg') no-repeat;
+    background-size:contain;
+  }
+  .packageManager .managerButtons .i.similar_pack{
+    width:18px;
+    height:18px;
+    background:url('../img/icons/other/similar_package.svg') no-repeat;
+    background-size:contain;
+  }
+  

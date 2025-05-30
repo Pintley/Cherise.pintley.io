@@ -1,0 +1,86 @@
+
+
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .form{
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%; 
+        }
+        
+        
+        title{
+            font-size: 30px;
+        }
+        
+        
+        button{
+            cursor: pointer;
+            padding: .8em;
+            width: 49%;
+            font-size: 1.2em;
+            text-align: center;
+            align-items: center;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        
+        submitbutton{
+            cursor: pointer;
+            padding: .8em;
+            width: 49%;
+            font-size: 1.2em;
+            text-align: center;
+            align-items: center;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        
+        button:hover{
+            background-color: #3b3232;
+            color: white;
+        }
+        
+        
+        
+        textarea{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.5em;
+        }
+        
+        legend{
+            padding: 0.2em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            margin: 0.5em;
+            text-decoration: none;
+            font-size: 150%;
+            border: 1px;
+            background-color: #7d7d7d;
+            color: rgb(142, 198, 255);
+            border-radius: 100px;
+        }
+        
+        fieldset{
+            background-color: #c4baba;
+            border: none;
+            border-radius: 7px;
+        }
+        
+        input{
+            width: 95%;
+        }

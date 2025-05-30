@@ -1,0 +1,68 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2019 Adobe
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe and its suppliers, if any. The intellectual
+* and technical concepts contained herein are proprietary to Adobe
+* and its suppliers and are protected by all applicable intellectual
+* property laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe.
+**************************************************************************/
+.sdk-Branding-branding {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    z-index: 2;
+}
+
+.sdk-Branding-branding .spectrum-Icon {
+    color: #2c2c2c;
+    height: 32px;
+}
+
+.sdk-Branding-hudBranding .spectrum-Icon {
+    padding: 0 7px;
+}
+
+.sdk-Branding-header {
+    color: #4b4b4b !important;
+    font-size: 15px !important;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.sdk-Branding-headerBorder {
+    border-left: 1px solid #d6d6d6;
+    height: 22px;
+    margin-left: 12px;
+}
+
+@media (max-width: 550px) {
+    .sdk-Branding-header {
+        display: none;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+    .sdk-Branding-header {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sdk-Branding-header {
+        display: none;
+    }
+}
+
+@media (min-width: 1023px) and (max-width: 1280px) {
+    .sdk-Branding-header {
+        display: none;
+    }
+}

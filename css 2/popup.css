@@ -1,0 +1,1117 @@
+/* Popup Content */
+
+#popupContent .poBlock {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    /* Upper than packagerManager */
+    background: #121212;
+    opacity: 0.92;
+}
+
+#popupContent .poBlock.current {
+    display: block;
+}
+
+
+/* top buttons panel */
+
+#popupContent .poBlock .top {
+    border-bottom: 2px groove #222;
+    padding: 15px;
+}
+
+#popupContent .poBlock .top .btn {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s ease;
+    /* display:inline-block; */
+    padding: 4px;
+    float: left;
+}
+
+#popupContent .poBlock .top .btn.right {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s ease;
+    float: right;
+    padding: 4px;
+}
+
+#popupContent .poBlock .top .btn.right:hover {
+    cursor: pointer;
+    margin-right: -2px;
+    text-decoration: underline;
+}
+
+#popupContent .poBlock .top .btn:hover {
+    cursor: pointer;
+    margin-left: -2px;
+    text-decoration: underline;
+}
+
+
+/* Stylized buttons */
+
+#popupContent .poBlock .top .fbtn {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    float: right;
+    padding: 6px;
+    opacity: 0.6;
+}
+
+#popupContent .poBlock .top .fbtn .icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-top: -4px;
+    margin-left: 5px;
+    transition: 0.15s ease;
+}
+
+#popupContent .poBlock .top .fbtn .icon.filePlayer {
+    background-image: url("../img/icons/popup/file_player.svg");
+}
+
+#popupContent .poBlock .top .fbtn .icon.webIcon {
+    background-image: url("../img/icons/popup/network.svg");
+}
+
+#popupContent .poBlock .top .fbtn .icon.profile {
+    background-image: url("../img/icons/popup/profile.svg");
+}
+
+#popupContent .poBlock .top .fbtn .icon.profile_ok {
+    background-image: url("../img/icons/popup/profile_ok.svg");
+}
+
+#popupContent .poBlock .top .fbtn .icon.subscription {
+    background-image: url("../img/icons/popup/auth/infinite.svg");
+    width: 20px;
+    height: 20px;
+}
+
+#popupContent .poBlock .top .fbtn .icon.subscription.r {
+    background-image: url("../img/icons/popup/auth/infinite_r.svg");
+    filter: grayscale(1);
+}
+
+#popupContent .poBlock .top .fbtn .icon.turnOffNotify {
+    background-image: url("../img/icons/popup/turn_off.svg");
+}
+
+#popupContent .poBlock .top .fbtn.disabled {
+    opacity: 0.3;
+}
+
+#popupContent .poBlock .top .fbtn:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/* body content */
+
+#popupContent .poBlock .pbody {
+    height: 100%;
+}
+
+#popupContent .poBlock .pbody.padding {
+    padding: 15px;
+}
+
+
+/* preload Popup content (market/video tutorials) */
+
+#popupContent .poBlock .preloadInfoBlock {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 25%;
+    width: 100%;
+}
+
+#popupContent .poBlock .preloadInfoBlock h1 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: default;
+    line-height: 22px;
+}
+
+#popupContent .poBlock .preloadInfoBlock h2 {
+    -webkit-animation: opacity_blink 1.5s ease-in-out infinite;
+    animation: opacity_blink 1.5s ease-in-out infinite;
+    opacity: 0.7;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: default;
+    line-height: 22px;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 7px auto;
+}
+
+.ci.onMain {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    -webkit-animation: dnd_roll 2.2s ease-in-out infinite;
+    animation: dnd_roll 2.2s ease-in-out infinite;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci.loader {
+    background: url("../img/icons/popup/informers/atom_animation_loading.gif") no-repeat;
+    background-size: contain;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci.warning {
+    background: url("../img/icons/popup/informers/warning.svg") no-repeat;
+    background-size: contain;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci.blocked {
+    background: url("../img/icons/popup/informers/eye_block.svg") no-repeat;
+    background-size: contain;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci.timeout {
+    background: url("../img/icons/popup/informers/timeout.svg") no-repeat;
+    background-size: contain;
+}
+
+
+/* #popupContent .poBlock .preloadInfoBlock  */
+
+.ci.bug {
+    background: url("../img/icons/popup/informers/bug.svg") no-repeat;
+    background-size: contain;
+}
+
+.ci.hash {
+    background: url("../img/icons/popup/informers/hash.svg") no-repeat;
+    background-size: contain;
+}
+
+
+/* POPUP - VIDEO TUTORIALS */
+
+.videoTutorials .pbody .bchead {
+    padding: 20px;
+    cursor: default;
+}
+
+.videoTutorials .pbody .bchead .link {
+    /* text-decoration: underline; */
+    border-bottom: 1px solid white;
+    display: inline-block;
+}
+
+.videoTutorials .pbody .bchead .link:hover {
+    border-bottom: 1px dotted #777;
+    cursor: pointer;
+}
+
+.videoTutorials .fbtn.watch_on_site:hover .icon.filePlayer {
+    transform: scale(0.9);
+}
+
+.videoTutorials .pbody h2 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 20px;
+    text-align: left;
+    cursor: default;
+    /* color:rgb(179, 179, 179); */
+}
+
+.videoTutorials .pbody h2.other {
+    color: rgb(179, 179, 179);
+}
+
+.videoTutorials .pbody hr {
+    opacity: 0.4;
+    border: 0;
+    border-bottom: 1px solid #333;
+}
+
+.videoTutorials .pbody .tutGroup {
+    background: #222;
+    padding: 15px;
+    font-size: 13px;
+    transition: 0.2s ease;
+    border-bottom: 1px solid #333;
+}
+
+.videoTutorials .pbody .tutGroup .expand_btn {
+    background: url("../img/icons/popup/arrow_right.svg") no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 21px;
+    float: right;
+    margin-top: 0px;
+    transition: 0.2s ease;
+}
+
+.videoTutorials .pbody .tutGroup.selected .expand_btn {
+    transform: rotateZ(90deg);
+    margin-right: 5px;
+}
+
+.videoTutorials .pbody .tutGroup:hover .expand_btn {
+    margin-right: 5px;
+}
+
+.videoTutorials .pbody .tutGroup:hover {
+    cursor: default;
+    background: #333;
+    border-left: 2px solid white;
+}
+
+.videoTutorials .pbody .tutGroup:active,
+.videoTutorials .pbody .tutGroup.selected {
+    cursor: default;
+    background: #111;
+    border-left: 2px solid white;
+}
+
+
+/* related package tuts - binded from server */
+
+.videoTutorials .pbody .tutGroup.binded {
+    border: 1px solid #ffdb29;
+}
+
+.videoTutorials .pbody .tutGroup.binded:hover,
+.videoTutorials .pbody .tutGroup.binded:active,
+.videoTutorials .pbody .tutGroup.binded.selected {
+    cursor: default;
+    /* background:#222; */
+    border-left: 4px solid #ffdb29;
+}
+
+.videoTutorials .pbody .tutGroup:hover sup.count,
+.videoTutorials .pbody .tutGroup:active sup.count,
+.videoTutorials .pbody .tutGroup.selected sup.count {
+    opacity: 1;
+}
+
+.videoTutorials .pbody .tutGroup sup {
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: black;
+    margin-left: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+
+/* Count in group */
+
+.videoTutorials .pbody .tutGroup sup.count {
+    padding: 2px 6px;
+    border-radius: 15px;
+    background: rgba(201, 201, 201, 0.4);
+    opacity: 0.8;
+}
+
+.videoTutorials .pbody .tutGroup sup.red {
+    background: rgb(255, 10, 43);
+}
+
+.videoTutorials .pbody .tutGroup sup.blue {
+    background: rgb(10, 88, 255);
+}
+
+.videoTutorials .pbody .tutGroup sup.green {
+    background: rgb(108, 255, 10);
+    color: black;
+}
+
+.videoTutorials .pbody .tutGroup sup.yellow {
+    background: rgb(255, 239, 10);
+    color: black;
+}
+
+
+/* icons tut group */
+
+.videoTutorials .pbody .tutGroup .i {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.videoTutorials .pbody .tutGroup .i.video {
+    background: url("../img/icons/popup/vtuts/video_camera.svg") no-repeat;
+    background-size: contain;
+}
+
+.videoTutorials .pbody .tutGroup .i.bind_pack {
+    background: url("../img/icons/popup/vtuts/play_binded.svg") no-repeat;
+    background-size: contain;
+}
+
+.videoTutorials .pbody .tutItems {
+    padding: 15px;
+}
+
+.videoTutorials .pbody .tutItems ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.videoTutorials .pbody .tutItems li {
+    border: 2px solid rgb(37, 37, 37);
+    margin: 4px;
+    display: inline-block;
+    /* width:360px;
+    height:240px; */
+    background: rgb(39, 38, 38);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.videoTutorials .pbody .tutItems li img {
+    transition: 0.3s ease;
+}
+
+.videoTutorials .pbody .tutItems li:hover {
+    border: 2px solid rgb(65, 65, 65);
+}
+
+.videoTutorials .pbody .tutItems li:hover .over-video .play_button,
+.videoTutorials .pbody .tutItems li:hover .over-video .open_in_browser {
+    opacity: 1;
+}
+
+.videoTutorials .pbody .tutItems li:hover .over-video .play_button:hover {
+    transform: scale(1.2);
+}
+
+.videoTutorials .pbody .tutItems li:hover .over-video .open_in_browser:hover {
+    letter-spacing: 2px;
+}
+
+.videoTutorials .pbody .tutItems li:hover img {
+    opacity: 0.4;
+}
+
+.videoTutorials .pbody .tutItems li {
+    overflow: hidden;
+}
+
+.videoTutorials .pbody .tutItems li img {
+    position: relative;
+    bottom: 20px;
+}
+
+.videoTutorials .over-video {
+    position: absolute;
+    z-index: 5;
+}
+
+.videoTutorials .over-video .open_in_browser {
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: absolute;
+    left: 34%;
+    /* top: 100%; */
+    bottom: 35%;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 7;
+    text-align: center;
+    opacity: 0;
+    vertical-align: middle;
+}
+
+.videoTutorials .over-video .open_in_browser .icon {
+    background: url("../img/icons/popup/file_player.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: bottom;
+}
+
+.videoTutorials .over-video .play_button {
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: url("../img/overlays/play_circle.png") no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 36%;
+    top: 26%;
+    opacity: 0;
+    z-index: 7;
+}
+
+
+/* POPUP - MARKET */
+
+.atomMarket .pbody.bg {
+    background: url("../img/bg/lowpoly_warm.jpg") no-repeat;
+    background-size: cover;
+}
+
+.atomMarket .pbody .customizeElement li {
+    padding: 0;
+    margin: 4px;
+    /* text-transform: uppercase; */
+    border-bottom: none;
+}
+
+.atomMarket .pbody .customizeElement .btn {
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    text-shadow: none;
+}
+
+.atomMarket .pbody .customizeElement .btn.selected,
+.atomMarket .pbody .customizeElement .btn:hover {
+    background: rgb(32, 32, 32);
+    color: white;
+}
+
+.atomMarket .pbody .customizeElement .btn.selected strong,
+.atomMarket .pbody .customizeElement .btn:hover strong {
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.atomMarket .pbody .customizeElement .btn strong {
+    background: rgb(32, 32, 32);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 9px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+
+/* ITEM BLOCK IN MARKET LAYOUT */
+
+.atomMarket .fbtn.market_site:hover .webIcon {
+    transform: rotate(20deg);
+}
+
+.atomMarket .fbtn.notify_off:hover .turnOffNotify {
+    transform: rotate(-20deg);
+}
+
+.atomMarket .turnOffNotifyOk {
+    background: url("../img/icons/popup/done_mini.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: right;
+    margin-top: 0px;
+    margin-left: 5px;
+    transition: 0.15s ease;
+}
+
+.atomMarket ul.market_tags_button{
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.atomMarket ul.market_tags_button > span{
+    font-size: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+
+
+.atomMarket ul.market_tags_button li{
+    background: rgb(235, 234, 234);
+    color: rgb(32, 32, 32);
+    border-radius: 16px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    display: inline-block;
+    margin:4px;
+    border: 2px solid transparent;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.atomMarket ul.market_tags_button li:hover{
+    background: rgb(255, 255, 255);
+    /* border-radius: 6px; */
+    letter-spacing: 1px;
+}
+
+.atomMarket ul.market_tags_button li:active{
+
+}
+
+.atomMarket ul.market_tags_button li.checked{
+    background: rgb(32, 32, 32);
+    color:  rgb(255, 255, 255);
+
+}
+.atomMarket ul.market_tags_button li.checked::before{
+    content: '-';
+
+}
+
+.atomMarket ul.market_tags_button li::before{
+    content: '+';
+    margin:2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.atomMarket .loadMoreButton {
+    margin: 0 auto;
+    text-align: center;
+    background: whitesmoke;
+    color: rgb(32, 32, 32);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    border: 0;
+    outline: 0;
+    padding: 8px 12px;
+    width: 35%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.atomMarket .loadMoreButton:hover {
+    background: rgb(32, 32, 32);
+    color: white;
+    width: 40%;
+}
+
+.atomMarket .pbody .vt_body {
+    margin: 0 auto;
+    padding-top: 10px;
+    min-width: 310px;
+    transition: 0.3s ease-in-out;
+}
+
+.atomMarket .pbody .mitem {
+    /* float:left; */
+    vertical-align: top;
+    display: inline-block;
+    margin: 8px;
+    /*   background: rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08); */
+    background: rgb(32, 32, 32);
+    color: rgb(238, 238, 238);
+    /* border-radius: 6px; */
+    padding: 5px;
+    margin-bottom: 4px;
+    width: 280px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid royalblue;
+}
+
+
+/* badge new item */
+
+.atomMarket .pbody .mitem .badgeNew {
+    background: url("../img/icons/popup/market/badge_new_item.svg") no-repeat;
+    background-size: contain;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    z-index: 15;
+}
+
+.atomMarket .pbody .mitem .label {
+    position: absolute;
+    background: royalblue;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    cursor: default;
+}
+
+.atomMarket .pbody .mitem .labelVersion {
+    position: absolute;
+    background: #ffdf36;
+    color: black;
+    padding: 0px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    left: 0;
+    top: 28px;
+    z-index: 10;
+    cursor: default;
+}
+
+.atomMarket .pbody .mitem.featured {
+    border-bottom: 2px solid #ffdd00;
+    -webkit-box-shadow: 0px 19px 35px -20px rgba(255, 115, 0, 0.7);
+    box-shadow: 0px 19px 35px -20px rgba(255, 115, 0, 0.7);
+}
+
+.atomMarket .pbody .mitem.featured .labelInstalledNotify {
+    background: #ffdd00;
+    color: black;
+}
+
+.atomMarket .pbody .mitem.updating {
+    border-bottom: 2px solid rgba(1, 255, 115, 1);
+    -webkit-box-shadow: 0px 19px 35px -20px rgba(0, 167, 69, 0.7);
+    box-shadow: 0px 19px 35px -20px rgba(0, 167, 69, 0.7);
+}
+
+.atomMarket .pbody .mitem.updating .labelInstalledNotify {
+    background: rgba(1, 255, 115, 1);
+    color: black;
+}
+
+.atomMarket .pbody .mitem .labelInstalledNotify {
+    position: absolute;
+    background: royalblue;
+    color: white;
+    padding: 0px 10px;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    cursor: default;
+}
+
+.atomMarket .pbody .mitem .label sub {
+    padding-left: 2px;
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.atomMarket .pbody .mitem .label sup {
+    padding-left: 2px;
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.atomMarket .pbody .mitem .label .saleIcon {
+    height: 16px;
+    width: 16px;
+    background: url("../img/icons/popup/market/flash.svg") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 1px;
+    margin-left: -7px;
+    -webkit-animation: shake 2s ease-in-out infinite;
+    animation: shake 2s ease-in-out infinite;
+}
+
+.atomMarket .pbody .mitem .icon {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.atomMarket .pbody .mitem .btn.free .icon {
+    background: url("../img/icons/popup/market/freebie.svg") no-repeat;
+    background-size: contain;
+}
+
+.atomMarket .pbody .mitem .btn.update .icon {
+    background: url("../img/icons/popup/market/refresh.svg") no-repeat;
+    background-size: contain;
+}
+
+.atomMarket .pbody .mitem .btn.download_subs .icon {
+    background: url("../img/icons/popup/market/update.svg") no-repeat;
+    background-size: contain;
+    /* background-position: 10px 0; */
+}
+
+.atomMarket .pbody .mitem .btn.buy .icon {
+    background: url("../img/icons/popup/market/shopping_cart.svg") no-repeat;
+    background-size: contain;
+}
+
+.atomMarket .pbody .mitem .btn.try_free .icon {
+    background: url("../img/icons/popup/market/download.svg") no-repeat;
+    background-size: contain;
+}
+
+.atomMarket .pbody .mitem .btn.link .icon {
+    background: url("../img/icons/popup/market/link.svg") no-repeat;
+    background-size: contain;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+.atomMarket .pbody .mitem .btn {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+    width: 70px;
+    transition: 0.2s ease;
+}
+
+
+/* BTN FREE */
+
+.atomMarket .pbody .mitem .btn.free {
+    background-color: #f02951;
+    /*  */
+    color: white;
+    /* width:60px; */
+}
+
+.atomMarket .pbody .mitem .btn.free:hover {
+    background-color: rgb(255, 57, 96);
+    color: white;
+}
+
+
+/* BTN DOWNLOAD SUBSCRIPTION */
+
+.atomMarket .pbody .mitem .btn.download_subs {
+    background-color: rgb(11, 167, 19);
+    color: white;
+    text-align: center;
+}
+
+.atomMarket .pbody .mitem .btn.download_subs:hover {
+    background-color: rgb(17, 189, 26);
+    color: white;
+}
+
+
+/* BTN UPDATE */
+
+.atomMarket .pbody .mitem .btn.update {
+    background-color: rgb(11, 167, 19);
+    color: white;
+    text-align: center;
+    /* width:60px; */
+}
+
+.atomMarket .pbody .mitem .btn.update:hover {
+    background-color: rgb(17, 189, 26);
+    color: white;
+}
+
+
+/* BTN BUY */
+
+.atomMarket .pbody .mitem .btn.buy {
+    background-color: royalblue;
+    color: white;
+    /* width:60px; */
+}
+
+.atomMarket .pbody .mitem .btn.buy:hover {
+    background-color: rgb(90, 144, 245);
+    color: white;
+}
+
+
+/* BTN TRY FREE */
+
+.atomMarket .pbody .mitem .btn.try_free {
+    background-color: rgb(54, 54, 54);
+    color: white;
+}
+
+.atomMarket .pbody .mitem .btn.try_free:hover {
+    background-color: rgb(77, 80, 83);
+    color: white;
+}
+
+
+/* BTN LINK */
+
+.atomMarket .pbody .mitem .btn.link {
+    background-color: rgb(241, 241, 241);
+    color: #272727;
+}
+
+.atomMarket .pbody .mitem .btn.link:hover .icon {
+    filter: invert(0);
+    -webkit-filter: invert(0);
+}
+
+.atomMarket .pbody .mitem .btn.link:hover {
+    background-color: #272727;
+    color: #f1f1f1;
+}
+
+
+/* CONTENT */
+
+.atomMarket .pbody .mitem .content {
+    padding: 3px;
+}
+
+.atomMarket .pbody .mitem .title {
+    cursor: default;
+    font-size: 13px;
+    font-weight: 600;
+    float: left;
+    max-width: 210px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.atomMarket .pbody .mitem .author {
+    cursor: default;
+}
+
+.atomMarket .pbody .mitem .author strong {
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.atomMarket .pbody .mitem .author strong:hover {
+    text-decoration: none;
+}
+
+
+/* .atomMarket .pbody .over-video img{
+    filter: brightness(40%);
+  } */
+
+.atomMarket .pbody .mitem.hovered .over-video img {
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%);
+}
+
+.atomMarket .pbody .mitem.hovered .over-video .play_button {
+    opacity: 0.6;
+}
+
+.atomMarket .pbody .mitem.hovered .over-video .play_button:hover {
+    opacity: 1;
+}
+
+
+/* 
+  .atomMarket .pbody .mitem:hover img{
+    filter: brightness(100%);
+  } */
+
+.atomMarket .over-video {
+    position: absolute;
+    z-index: 5;
+}
+
+.atomMarket .pbody .mitem .videoBlock {
+    width: 280px;
+    height: 160px;
+}
+
+
+/* 
+  .atomMarket .over-video .play_button:hover{
+    opacity:1;
+  } */
+
+.atomMarket .over-video .play_button {
+    cursor: pointer;
+    transition: 0.2s ease;
+    /* opacity:0.6; */
+    background: url("../img/overlays/play_circle.png") no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    /* display:block; */
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    opacity: 0;
+    z-index: 7;
+}
+
+.atomMarket .pbody .mitem .hiddenContent {
+    border-top: 1px dotted rgb(63, 63, 63);
+    display: none;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    position: absolute;
+    background: white;
+    left: 0px;
+    padding: 5px;
+    z-index: 25;
+    background: rgb(46, 46, 46);
+    color: rgb(218, 218, 218);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+    width: 280px;
+}
+
+.atomMarket .pbody .mitem .hiddenContent p {
+    font-size: 9px;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    color: rgb(194, 194, 194);
+    padding: 3px;
+    cursor: default;
+}
+
+.atomMarket .pbody .mitem .hiddenContent p i {
+    font-weight: 600;
+    font-size: 10px;
+    font-style: normal;
+    color: white;
+}
+
+.atomMarket .pbody .mitem .hiddenContent p strong {
+    font-weight: 600;
+    font-size: 10px;
+    text-decoration: underline;
+    transition: 0.12s ease;
+}
+
+.atomMarket .pbody .mitem .hiddenContent p strong:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.atomMarket .pbody .mitem .compatibles {
+    font-size: 13px;
+    font-weight: 600;
+    vertical-align: top;
+    float: right;
+    max-width: 64px;
+}
+
+.atomMarket .pbody .mitem .compatibles .gi {
+    cursor: help;
+    margin: 0px;
+    /* margin-bottom:2px;
+    margin-left:2px; */
+    /* float:right; */
+    display: block;
+}
+
+.atomMarket .pbody .mitem .compatibles div[tooltip] {
+    float: right;
+    margin-left: 2px;
+}
+
+.atomMarket .pbody .mitem .compatibles .gi.f {
+    filter: opacity(50%) grayscale(100%);
+    -webkit-filter: opacity(50%) grayscale(100%);
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+.atomMarket .pbody .mitem .compatibles .gi.f:hover {
+    filter: opacity(100%) grayscale(0%);
+    -webkit-filter: opacity(100%) grayscale(0%);
+}
+
+
+/* POPUP - ATOM SETTINGS */
+
+.atomSettings .pbody {
+    padding: 20px;
+    cursor: default;
+}
+
+.atomSettings .pbody .setting_block {
+    padding-top: 15px;
+}
+
+.atomSettings .pbody h2 i {
+    margin: 10px;
+    opacity: 0.6;
+}
+
+.atomSettings .pbody .btn {
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border: 1px solid #ffdf36;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.atomSettings .pbody .btn:hover {
+    background: #ffdf36;
+    color: black;
+}

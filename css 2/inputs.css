@@ -1,0 +1,402 @@
+
+input[type="text"].search {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 2px solid rgb(58, 58, 58);
+    box-shadow: 4px 4px 14px rgb(56, 56, 56);
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    border-radius: 15px;
+    background: url('../img/icons/tools/search_white.svg') no-repeat 7px 6px #777;
+    background-size: 13px 13px;
+    padding-left: 23px;
+    color: white;
+    /* transition: 0.2s ease width, background-color, color; */
+    transition: width 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    width: 125px;
+    font-size: 11px;
+}
+
+input[type="text"].search::placeholder {
+    color: rgb(216, 216, 216);
+}
+
+input[type="text"].search:focus::placeholder {
+    color: rgb(117, 117, 117);
+}
+
+input[type="text"].search:focus {
+    border: 2px solid rgb(192, 192, 192);
+    color: black;
+    width: 150px;
+    background: url('../img/icons/tools/search_black.svg') no-repeat 7px 6px #ececec;
+    background-size: 13px 13px;
+}
+
+
+/* RANGE SLIDER */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 8px;
+    background: transparent;
+    outline: none;
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    transition: 0.2s;
+    background: #444;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 13px;
+    width: 15px;
+    border-radius: 25px;
+    background: #ccc;
+    -webkit-appearance: none;
+    margin-top: -4.5px;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: rgb(230, 230, 230);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #777;
+}
+
+input[type="range"].audio_sliding {
+    width: 75px;
+}
+
+input[type="range"].audio_sliding::-webkit-slider-thumb {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: #ccc;
+    -webkit-appearance: none;
+    margin-top: -4.5px;
+}
+
+
+
+
+
+input[type='range'].ppro_range_speed {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 0;
+    background: transparent;
+    font-size: 1em;
+    cursor: pointer;
+    /* opacity:0.6; */
+    position: relative;
+
+    transition:0.3s ease all;
+}
+
+
+/* input[type='range'].ppro_range_speed:hover{
+    opacity:1;
+} */
+
+input[type='range'].ppro_range_speed,
+input[type='range'].ppro_range_speed::-webkit-slider-runnable-track,
+input[type='range'].ppro_range_speed::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background:transparent;
+}
+
+input[type='range'].ppro_range_speed:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    height: 1em;
+
+    box-sizing: border-box;
+
+    background-color:#0c0c0c;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.1);
+    
+    border-radius: 6px;
+
+}
+
+
+input[type='range'].ppro_range_speed::-webkit-slider-thumb {
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: solid 0.35em transparent solid 0.25em transparent;
+    width: 1.3em;
+    height: 1.3em;
+    background: #858585;
+    background-clip: content-box;
+    position: relative;
+    z-index: 10;
+    margin-top: -0.1em;
+    margin-left: 0.05em;
+
+}
+
+
+
+
+/* other styles */
+
+
+/* style for change preview item */
+
+input[type="range"].style_sliding {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 0;
+    width: 110px;
+    transition: 0.2s ease;
+}
+
+input[type="range"].style_sliding.resSmall {
+    width: 40px;
+}
+
+input[type="range"].style_sliding.resSmall::-webkit-slider-thumb {
+    width: 12px;
+}
+
+input[type="range"].style_sliding::-webkit-slider-thumb {
+    height: 3px;
+    width: 25px;
+    /* border-radius: 0px; */
+    background: #ccc;
+    /* cursor: pointer; */
+    -webkit-appearance: none;
+    margin-top: -4.5px;
+}
+
+
+/* style for customize sliders */
+
+input[type="range"].style_customize_slider {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 0;
+    width: 100%;
+}
+
+input[type="range"].style_customize_slider:hover::-webkit-slider-runnable-track {
+    background: rgb(128, 128, 128);
+}
+
+input[type="range"].style_customize_slider::-webkit-slider-thumb {
+    height: 6px;
+    width: 22px;
+    border-radius: 0;
+    /* border-radius: 0px; */
+    background: #ccc;
+    /* cursor: pointer; */
+    -webkit-appearance: none;
+    margin-top: -1px;
+}
+
+
+
+
+
+/* CHECKBOXES/RADIO */
+
+
+/* 
+CHECKBOX:
+
+<label class="labelBox">Enable Mix Mode
+    <input type="checkbox" name="checkbox-text-animation-mix-mode">
+    <span class="checkmark"></span>
+</label>
+
+RADIO:
+
+<label class="labelBox">One
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark radio"></span>
+</label>
+
+*/
+
+
+/* The container */
+
+label.labelBox {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    margin-right: 3px;
+    cursor: pointer;
+    line-height: 24px;
+    font-size: 11px;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label.labelBox small {
+    opacity: 0.6;
+}
+
+
+/* Hide the browser's default checkbox */
+
+label.labelBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+label.labelBox span.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #141414;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    transition: ease 0.2s;
+    /* border:1px solid transparent; */
+    border: 1px solid rgb(46, 46, 46);
+}
+
+
+/* On mouse-over, add a grey background color */
+
+label.labelBox:hover input~span.checkmark {
+    background-color: #010101;
+    border: 1px solid #2196F3;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+label.labelBox input:checked~span.checkmark {
+    background-color: #2196F3;
+    border: 1px solid #2196F3;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+span.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+label.labelBox input:checked~span.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+label.labelBox span.checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* RADIO BUTTONS */
+
+label.labelBox span.checkmark.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #141414;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    transition: ease 0.2s;
+    border-radius: 50%;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+label.labelBox span.checkmark.radio:after {
+    top: 5px;
+    left: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* Settings Input Styles */
+
+
+
+label.labelBox.labelSetting span.checkmark {
+    border: 2px solid #FFDF36;
+    background: transparent;
+}
+
+label.labelBox.labelSetting input:checked~span.checkmark {
+    /* border:1px solid red; */
+    border: 2px solid transparent;
+    background-color: rgb(255, 235, 54);
+}
+
+label.labelBox.labelSetting:hover input~span.checkmark {
+    background-color: #FFDF36;
+    border: 2px solid rgb(221, 186, 13)!important;
+}
+
+label.labelBox.labelSetting span.checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* Style the indicator (dot/circle) */
+
+label.labelBox.labelSetting span.checkmark.radio:after {
+    top: 5px;
+    left: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: black;
+}

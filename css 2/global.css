@@ -1,0 +1,1554 @@
+/*
+* GLOBAL CSS
+* ATOM EXTENSION https://aniom.net/
+* CHANGED: 30.11.19
+*/
+
+
+/* montserrat-regular - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/montserrat-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/montserrat-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* montserrat-600 - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/montserrat-v14-latin-600.eot');
+    /* IE9 Compat Modes */
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('../fonts/montserrat-v14-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat-v14-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/montserrat-v14-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/montserrat-v14-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/montserrat-v14-latin-600.svg#Montserrat') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* montserrat-800 - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/montserrat-v14-latin-800.eot');
+    /* IE9 Compat Modes */
+    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url('../fonts/montserrat-v14-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat-v14-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/montserrat-v14-latin-800.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/montserrat-v14-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/montserrat-v14-latin-800.svg#Montserrat') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* GLOBALLY */
+
+* {
+    /* font-family: 'Montserrat', -apple-system, 'Segoe UI', Tahoma, Verdana, sans-serif; */
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 19px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 32px;
+    color: #FFDF36;
+}
+
+.blurredMode {
+    filter: blur(5px)!important;
+    -webkit-filter: blur(5px)!important;
+}
+
+.blurredMode_packManager {
+    filter: blur(12px)!important;
+    -webkit-filter: blur(12px)!important;
+}
+
+.blurredMode_activationService {
+    filter: blur(12px) grayscale(100%)!important;
+    -webkit-filter: blur(12px) grayscale(100%)!important;
+}
+
+.blurredMode_confirmPopup {
+    filter: blur(12px)!important;
+    -webkit-filter: blur(12px)!important;
+}
+
+#wrapper {
+    /* height: 100%; */
+    margin: 0;
+}
+
+.splitBothResizer {
+    z-index: 2;
+    float: left;
+    position: relative;
+    left: 0;
+    cursor: col-resize;
+    width: 8px;
+    background-color: #333333;
+    background-image: url("../img/special/split_resizer.svg");
+    background-size: 4px 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.23);
+    /* prevent browser's built-in drag from interfering */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Menu and Items inside (right and left)  */
+
+#container {
+    /* width:100%; */
+    height: 100%;
+    /* display: inline-flex; */
+}
+
+
+/* Main Content with blocks*/
+
+#content {
+    height: 100%;
+    /* float:right; */
+    /* display:block; */
+    /* border:1px solid brown; */
+}
+
+#content strong {
+    display: block;
+    font-weight: 600;
+    color: #ddd;
+    font-size: 12px;
+    /* text-align: center; */
+    cursor: default;
+    margin: 12px;
+}
+
+#content strong:before {
+    content: '\00BB';
+    opacity: 0.5;
+    padding: 5px;
+    user-select: none;
+}
+
+/* Content Block to show */
+
+#content .coBlock {
+    /*     height:300px;
+    position:absolute; */
+    display: none;
+    /* border:1px solid blue; */
+}
+
+
+#content .coBlock.current {
+    display: block;
+}
+
+
+/* SPECIAL CLASSES */
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+
+/* temp for test */
+
+.hostBorder div.image {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul.changeHeader li {
+    padding: 5px;
+    background: white;
+    color: black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* FLOATS */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.b1 {
+    border: 1px solid red;
+}
+
+.b2 {
+    border: 2px solid green;
+}
+
+.b3 {
+    border: 1px solid blue;
+}
+
+
+/* Keyframe Animations */
+
+
+/* Spin for Logo */
+
+@keyframes spin_revert {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes spin_revert {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Shake for Notify Icon */
+
+@-webkit-keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(0, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(0, -2px, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(0, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(0, -2px, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@-webkit-keyframes pushUp {
+    0% {
+
+        transform: translateY(0px);
+    }
+    50% {
+
+        transform: translateY(-4px);
+    }
+    100% {
+
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pushUp {
+    0% {
+
+        transform: translateY(0px);
+    }
+    50% {
+
+        transform: translateY(-4px);
+    }
+    100% {
+
+        transform: translateY(0px);
+    }
+}
+
+
+/* Drag And Drop Rolling */
+
+@-webkit-keyframes dnd_roll {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes dnd_roll {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* Opacity Blinks */
+
+@-webkit-keyframes opacity_blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity_blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Market Callouts Rolls */
+
+
+/* Drag And Drop Rolling */
+
+@-webkit-keyframes market_callouts_roll {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-3%);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes market_callouts_roll {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-3%);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+/* SCROLLBAR */
+
+[scrollbar] {
+    overflow-y: auto;
+    overflow-x: auto;
+
+    /* height: 100%; */
+}
+
+[scrollbar-type='x'] {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+[scrollbar-type='y'] {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+[scrollbar]::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+
+}
+
+[scrollbar]::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+
+}
+
+[scrollbar]::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #4D4D4D;
+
+}
+
+[scrollbar]::-webkit-scrollbar-thumb:hover {
+    background: #6E6E6E;
+}
+
+
+/* INPUTS COLLECTION */
+
+
+/* TEXT INPUT */
+
+
+/* GLOBAL MENU TREES */
+
+#menu {
+    /* min-width: 5px; */
+    /* width:25%; */
+    float: left;
+    height: 100%;
+    background: #222222;
+    border-right: 1px solid #2c2c2c;
+    /* border:1px solid chartreuse; */
+}
+
+#menu ul {
+    font-size: 11px;
+    list-style-type: none;
+}
+
+#menu ul li {
+    border-bottom: 1px solid #282828;
+    background: #222;
+    transition: ease 0.2s;
+    padding: 12px;
+    color: #999;
+    /* min-width:115px; */
+    white-space: nowrap;
+}
+
+#menu ul li:hover {
+    background: #191919;
+    color: #ddd;
+    cursor: pointer;
+}
+
+#menu ul li div.title {
+    padding: 12px;
+    margin-left: -12px;
+    font-weight: 600;
+}
+
+#menu ul li.current {
+    background: #191919;
+    border-right: 2px solid #FFE032;
+    color: #ddd;
+}
+
+
+/* icons for tree li */
+
+#menu ul li .icon {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    opacity: 0.6;
+}
+
+#menu ul li .icon.folder {
+    background: url('../img/icons/menu/directory.svg') no-repeat;
+    background-size: contain;
+}
+
+
+/* Special Icons for item groups */
+
+#menu ul li .icon.AE {
+    background: url('../img/icons/menu/item_ae.svg') no-repeat;
+    background-size: contain;
+}
+
+#menu ul li .icon.PR {
+    background: url('../img/icons/menu/item_pr.svg') no-repeat;
+    background-size: contain;
+}
+
+#menu ul li .icon.SFX {
+    background: url('../img/icons/menu/item_sfx.svg') no-repeat;
+    background-size: contain;
+}
+
+#menu ul li .icon.FOOTAGE {
+    background: url('../img/icons/menu/item_footage.svg') no-repeat;
+    background-size: contain;
+}
+
+#menu ul li .icon.PRESETS {
+    background: url('../img/icons/menu/item_presets.svg') no-repeat;
+    background-size: contain;
+}
+
+
+/* items counter for groups */
+
+#menu ul li sup {
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #353535;
+    color: #A6A6A6;
+    border-radius: 25px;
+    padding: 4px 6px;
+    margin-left: 5px;
+    transition: ease 0.2s;
+    top: 2px;
+    position: relative;
+}
+
+
+/* folder settings */
+
+
+/* Root Group */
+
+#menu ul li.folder sup {
+    background: #353535;
+    color: #A6A6A6;
+}
+
+#menu ul li.folder.active>.title sup {
+    background: #FFE032;
+    color: black;
+}
+
+
+/* Inside Root 1 */
+
+#menu ul li.folder.active ul li.folder .title sup {
+    background: #353535;
+    color: #A6A6A6;
+}
+
+#menu ul li.folder.active ul li.folder.active .title sup {
+    background: #FFE032;
+    color: black;
+}
+
+
+/* Inside Root 2 */
+
+#menu ul li.folder.active ul li.folder.active ul li.folder .title sup {
+    background: #353535;
+    color: #A6A6A6;
+}
+
+#menu ul li.folder.active ul li.folder.active ul li.folder.active .title sup {
+    background: #FFE032;
+    color: black;
+}
+
+
+/* Inside Root 3 */
+
+#menu ul li.folder.active ul li.folder.active ul li.folder ul li.folder sup {
+    background: #353535;
+    color: #A6A6A6;
+}
+
+#menu ul li.folder.active ul li.folder.active ul li.folder ul li.folder.active sup {
+    background: #FFE032;
+    color: black;
+}
+
+
+/* IS NEW ITEMS MARK */
+
+#menu ul li .is_new {
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(0deg, rgb(14, 106, 255) 0%, rgb(16, 154, 209) 100%);
+    color: white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    ;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    top: -2px;
+    position: relative;
+    box-shadow: 0px 0px 6px 1px rgba(49, 151, 255, 0.4), 2px 2px 6px 1px rgba(44, 240, 255, 0.4), -2px -6px 6px 1px rgba(87, 92, 255, 0.4), inset -4px 2px 6px 1px rgba(87, 92, 255, 0.4);
+    -webkit-animation: opacity_blink 4.2s linear infinite;
+    animation: opacity_blink 4.2s linear infinite;
+    transition: 0.4s ease;
+}
+
+#menu ul li.folder .is_new_group {
+    top: -2px;
+    position: relative;
+    font-size: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(0deg, rgb(14, 106, 255) 0%, rgb(16, 154, 209) 100%);
+    color: white;
+    border-radius: 25px;
+    padding: 4px 6px;
+    margin-left: 5px;
+    transition: ease 0.2s;
+    box-shadow: 0px 0px 8px 0px rgba(49, 151, 255, 0.3), 2px 2px 8px 0px rgba(44, 240, 255, 0.3), -2px -6px 8px 0px rgba(87, 92, 255, 0.3), inset -4px 2px 8px 0px rgba(87, 92, 255, 0.3);
+    -webkit-animation: opacity_blink 4.2s linear infinite;
+    animation: opacity_blink 4.2s linear infinite;
+}
+
+
+/* add border bottom for group three level */
+
+#menu ul li.folder.active div.title {
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+
+/* disable double border bottom for group three level when not active */
+
+#menu ul li.folder.active ul li.folder div.title {
+    border-bottom: none;
+    color: #A6A6A6;
+}
+
+#menu ul li.folder.active ul li.folder.active div.title {
+    border-bottom: none;
+    color: #ddd;
+}
+
+
+/* folder active/last active */
+
+#menu ul li.folder.active {
+    border-left: 2px solid #FFE032;
+    background: #333;
+    font-weight: bold;
+}
+
+#menu ul li.folder.last-active {
+    background: #292929;
+    border-left: 2px solid #f9f9f9;
+}
+
+#menu ul li.folder.top-active {
+    background: #292929;
+    border-left: 2px solid #f9f9f9;
+
+}
+/* #menu ul li.folder.active ul li.folder.active ul li.folder .title sup { */
+
+
+#menu ul li.folder.last-active:hover {
+    border-left: 2px solid #FFE032;
+}
+
+
+/* reset margins to clear borders from inside li ul */
+
+#menu ul li.folder {
+    padding: 0;
+    margin: 0;
+    padding-left: 12px;
+}
+
+
+/* get demo package info */
+
+#menu ul li.used_demo {
+    background: #FFE032;
+    color: #111;
+    font-weight: 600;
+}
+
+#menu ul li.used_demo:hover {
+    background: #111;
+    color: #ddd;
+    cursor: pointer;
+}
+
+
+/* Spoiler Global Container */
+
+
+/* variants of engine tools (hidden all, will be show at start from pack type) */
+
+.spoilerContainer {
+    display: none;
+}
+
+
+/* .spoilerContainer.selected{display:block;} */
+
+
+/* Tables */
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.col {
+    display: table-column;
+}
+
+.cell {
+    display: table-cell;
+}
+
+
+/* Special Tooltips */
+
+[special-tooltip] {
+    position: relative;
+    display: inline-block;
+}
+
+[special-tooltip] .tooltip-content {
+    /* font-weight: 500; */
+    font-size: 11px;
+    visibility: hidden;
+    min-width: 110px;
+    max-width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 6;
+    bottom: 150%;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* left: 100%; */
+    margin-left: -10px;
+}
+
+[special-tooltip] .tooltip-content strong {
+    font-weight: 700;
+    color: #FFDF36;
+}
+
+[special-tooltip] .tooltip-content strong.g {
+    color: rgb(79, 205, 255);
+}
+
+[special-tooltip] .tooltip-content strong.critical {
+    color: rgb(255, 17, 97);
+}
+
+[special-tooltip] .tooltip-content sup {
+    color: rgb(79, 205, 255);
+    font-weight: 600;
+}
+
+[special-tooltip] .tooltip-content sup.critical {
+    color: rgb(255, 17, 97);
+}
+
+[special-tooltip] .tooltip-content sup.waiting {
+    color: #FFDD00;
+    -webkit-animation: opacity_blink 1.5s ease-in-out infinite;
+    animation: opacity_blink 1.5s ease-in-out infinite;
+}
+
+[special-tooltip] .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+[special-tooltip]:hover .tooltip-content {
+    visibility: visible;
+}
+
+
+/* Tooltips */
+
+[tooltip] {
+    /*  margin:20px 60px;*/
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 11px;
+
+    
+}
+
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+    z-index: 6;
+    opacity: 0;
+    pointer-events: none;
+}
+
+[tooltip-position='left']::before {
+    left: 0%;
+    top: 50%;
+    margin-left: -13px;
+    transform: translatey(-50%) rotate(-90deg)
+}
+
+[tooltip-position='top']::before {
+    left: 50%;
+}
+
+[tooltip-position='bottom']::before {
+    top: 100%;
+    margin-top: 8px;
+    transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+
+[tooltip-position='right']::before {
+    left: 100%;
+    top: 50%;
+    transform: translatey(-50%) rotate(90deg)
+}
+
+[tooltip-type='footer']::after {
+    margin-left: 35px;
+    text-align: left;
+    min-width: 80px;
+    left: 50%;
+    /* font-size:8px; */
+}
+
+[tooltip-type='toolbar']::before {
+    left: 100%;
+    top: 50%;
+    transform: translatey(-50%) rotate(90deg)
+}
+[tooltip-type='toolbar']::after {
+    /* margin-left: 35px; */
+    text-align: left;
+    min-width: 90px;
+
+
+    /* left: 50%; */
+    /* font-size:8px; */
+}
+
+[tooltip-type='customizerRange']::after {
+    margin-top: 12px;
+    min-width: 40px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+[tooltip-type='customizerRange']::before {
+    top: 20%;
+}
+
+[tooltip-type='customizer']::after {
+    /*     margin-left:35px;
+    text-align: left;
+    
+    left:50%; */
+    min-width: 80px;
+    font-size: 10px;
+    font-weight: 600;
+    /* font-size:8px; */
+}
+
+[tooltip-type='items']::before {
+    top: 100%;
+    transform: translateX(-50%) translatey(4px) rotate(-180deg)
+}
+
+[tooltip-type='items']::after {
+    top: 100%!important;
+    transform: translateX(-85%) translateY(8px)!important;
+    min-width: 85px;
+    font-size: 10px;
+}
+
+[tooltip-type='tools']::after {
+    margin-left: 30px;
+    text-align: left;
+    left: 50%;
+}
+
+[tooltip-type='toolsBtn']::after {
+    margin-left: 30px;
+    text-align: left;
+    left: 50%;
+}
+
+[tooltip-type='def_font']::after {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+[tooltip-type='pack_manager']::after {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+    width: 80px;
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%) translateY(-100%);
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    /* min-width: 80px; */
+    border-radius: 5px;
+    pointer-events: none;
+    padding: 5px 8px;
+    z-index: 6;
+    opacity: 0;
+}
+
+[tooltip-position='left']::after {
+    left: 0%;
+    top: 50%;
+    margin-left: -8px;
+    transform: translateX(-100%) translateY(-50%);
+}
+
+[tooltip-position='top']::after {
+    left: 50%;
+}
+
+[tooltip-position='bottom']::after {
+    top: 100%;
+    margin-top: 8px;
+    transform: translateX(-50%) translateY(0%);
+}
+
+[tooltip-position='right']::after {
+    left: 100%;
+    top: 50%;
+    margin-left: 8px;
+    transform: translateX(0%) translateY(-50%);
+}
+
+[tooltip-talign='left']::after {
+    text-align: left;
+}
+
+[tooltip-talign='right']::after {
+    text-align: right;
+}
+
+[tooltip-talign='center']::after {
+    text-align: center;
+}
+
+[tooltip]:hover::after,
+[tooltip]:hover::before {
+    opacity: 1;
+}
+
+
+/* System Messages (alert and etc) */
+
+.systemMessage {
+    position: fixed;
+    background: #111111;
+    z-index: 200;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    max-height: 115px;
+    border-bottom: 1px dashed #757575;
+    /* top:0; */
+    top: -130px;
+    /* 130 def */
+    cursor: default;
+}
+
+.systemMessage .content {
+    text-align: center;
+    min-width: 270px;
+    padding: 20px;
+}
+
+.systemMessage .content h1 {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.systemMessage .content h1.success {
+    color: #FFDD00;
+}
+
+.systemMessage .content h1.error {
+    color: #FF1F4C;
+}
+
+.systemMessage .content h1.info {
+    color: #00C8FF;
+}
+
+.systemMessage .content h1.notify {
+    color: #00FFA9;
+}
+
+.systemMessage .content p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.systemMessage .content strong {
+    /* color:#FFDD00; */
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px dotted white;
+}
+
+.systemMessage .content code {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #242424;
+    background: #cecece;
+    border: 1px dotted #424242;
+    padding: 2px;
+    cursor: text;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+.systemMessage .content a {
+    font-size: 12px;
+    text-decoration: underline;
+    transition: 0.1s ease;
+}
+
+.systemMessage .content a:hover {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Close text/counting to close */
+
+.systemMessage .content small {
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 600;
+    opacity: 0.4;
+    transition: 0.1s ease;
+}
+
+.systemMessage .content small:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+/* Counting circle/numbers */
+
+.systemMessage .content small .nums {
+    /* display:block; */
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.systemMessage .content small .nums .circle {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 8px;
+    top: -15px;
+}
+
+.systemMessage .i {
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    /* margin:10px auto; */
+}
+
+.systemMessage .i.success {
+    background: url('../img/icons/message/success.svg') no-repeat;
+    background-size: contain;
+}
+
+.systemMessage .i.error {
+    background: url('../img/icons/message/error.svg') no-repeat;
+    background-size: contain;
+}
+
+.systemMessage .i.info {
+    background: url('../img/icons/message/info.svg') no-repeat;
+    background-size: contain;
+}
+
+.systemMessage .i.notify {
+    background: url('../img/icons/message/notify.svg') no-repeat;
+    background-size: contain;
+}
+
+
+/* Drag and Drop installation place */
+
+.dragAndDropInstallation {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #111111;
+    z-index: 1000;
+    border: 2px dashed white;
+    /* border-radius: 2px; */
+    /* margin:3px; */
+    opacity: 0.8;
+    transition: 0.2s ease;
+    display: none;
+}
+
+.dragAndDropInstallation .place {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+
+
+/* Center vertically, part 1 */
+
+
+/* .dragAndDropInstallation:before { 
+    content: '';
+    display: inline-block;
+    height: 100%;
+
+    vertical-align: middle;
+} */
+
+
+/* is status */
+
+.dragAndDropInstallation.is-active {
+    display: block;
+}
+
+.dragAndDropInstallation.is-active:hover {
+    opacity: 0.95;
+    border: 2px dashed white;
+}
+
+.dragAndDropInstallation.is-dragover {
+    display: block;
+    opacity: 0.95;
+    border: 2px dashed white;
+}
+
+.dragAndDropInstallation.is-active:hover .atomBoxLogo,
+.dragAndDropInstallation.is-dragover .atomBoxLogo {
+    -webkit-animation: dnd_roll 1.2s ease-in-out infinite;
+    animation: dnd_roll 1.2s ease-in-out infinite;
+}
+
+.dragAndDropInstallation .place .atomBoxLogo {
+    background: url('../img/atom_upload_pack.svg') no-repeat;
+    background-size: contain;
+    width: 170px;
+    height: 145px;
+    margin: 10px auto;
+}
+
+.dragAndDropInstallation .place input {
+    display: none;
+}
+
+.dragAndDropInstallation .place p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: default;
+    line-height: 22px;
+}
+
+.dragAndDropInstallation .place p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dragAndDropInstallation .place label {
+    font-size: 13px;
+    font-weight: 500;
+    /* text-decoration: underline; */
+    border-bottom: 1px dotted white;
+}
+
+.dragAndDropInstallation .place label:hover {
+    border-bottom: 1px dotted transparent;
+    cursor: pointer;
+}
+
+.dragAndDropInstallation .place p:nth-of-type(3) {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* TEST MODE WINDOW */
+
+
+/* Drag and Drop installation place */
+
+.testModeWindow {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #111111;
+    z-index: 60;
+    border: 3px double #FFDD00;
+    opacity: 0.8;
+    transition: 0.2s ease;
+    display: none;
+}
+
+.testModeWindow .place {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+.testModeWindow .place .atomDevLogo {
+    background: url('../img/atom_test_mode_active.svg') no-repeat;
+    background-size: contain;
+    width: 170px;
+    height: 145px;
+    margin: 10px auto;
+    -webkit-animation: dnd_roll 2.2s ease-in-out infinite;
+    animation: dnd_roll 2.2s ease-in-out infinite;
+}
+
+.testModeWindow .place a {
+    padding: 4px 8px;
+    background: white;
+    color: black;
+    transition: 0.2s ease;
+    font-weight: 600;
+}
+
+.testModeWindow .place a:hover {
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.testModeWindow .place p.very-small {
+    font-size: 9px;
+    opacity: 0.5;
+}
+
+.testModeWindow .place p.exit-mode {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(167, 167, 167);
+}
+
+.testModeWindow .place p.exit-mode a {
+    padding: 0;
+    background: none;
+    color: rgb(167, 167, 167);
+    text-decoration: underline;
+}
+
+.testModeWindow .place p.exit-mode a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.testModeWindow .place p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: default;
+    line-height: 22px;
+}
+
+.testModeWindow .place p.cy {
+    color: #FFDD00;
+}
+
+.testModeWindow .place p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.testModeWindow .place label {
+    font-size: 13px;
+    font-weight: 500;
+    /* text-decoration: underline; */
+    border-bottom: 1px dotted white;
+}
+
+.testModeWindow .place label:hover {
+    border-bottom: 1px dotted transparent;
+    cursor: pointer;
+}
+
+.testModeWindow .place p:nth-of-type(3) {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ATOM BROKEN PACKAGE / ANY INFO */
+
+.outsideWrapper {
+    position: relative;
+    top: 10%;
+    /* border:1px solid red; */
+}
+
+.bsPackageSector {
+    width: 300px;
+    margin: 0 auto;
+    display: none;
+}
+
+.bsPackageSector .place {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.bsPackageSector .place .atomBrokenLogo {
+    background: url('../img/atom_broken_pack.svg') no-repeat;
+    background-size: contain;
+    width: 180px;
+    height: 155px;
+    margin: 10px auto;
+    -webkit-animation: dnd_roll 2.2s ease-in-out infinite;
+    animation: dnd_roll 2.2s ease-in-out infinite;
+}
+
+.bsPackageSector .place .subscriptionPack {
+    margin: 0px auto;
+    background: url('../img/icons/popup/auth/infinite.svg') no-repeat;
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    -webkit-animation: dnd_roll 2.2s ease-in-out infinite;
+    animation: dnd_roll 2.2s ease-in-out infinite;
+    /* filter: grayscale(1); */
+}
+
+.bsPackageSector .place .subscriptionPack.r {
+    margin: 0px auto;
+    background: url('../img/icons/popup/auth/infinite_r.svg') no-repeat;
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    -webkit-animation: dnd_roll 2.2s ease-in-out infinite;
+    animation: dnd_roll 2.2s ease-in-out infinite;
+    filter: grayscale(1);
+}
+
+.bsPackageSector .place p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: default;
+    line-height: 22px;
+}
+
+.bsPackageSector .place p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.bsPackageSector .place p:nth-of-type(3) {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bsPackageSector .place .btn {
+    margin-top: -15px;
+    /* -webkit-animation: opacity_blink 2.2s ease-in-out infinite;
+    animation: opacity_blink 2.2s ease-in-out infinite; */
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.2s ease all;
+}
+
+.bsPackageSector .place .btn:hover {
+    border-color: rgb(255, 231, 14);
+    color: rgb(255, 231, 14);
+    cursor: pointer;
+}
+
+
+/* Show hide content - like a spoilers */
+
+.hideContent {
+    display: none;
+}
+
+.hideContent.selected {
+    display: block;
+}
